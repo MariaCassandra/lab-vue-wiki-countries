@@ -1,14 +1,12 @@
 <template>
   <div className="app">
+    <router-view/>
   </div>
 </template>
 
 <script>
-  import logo from './logo.svg';
   export default {
-    data: () => ({
-      logo
-    })
+    name: 'App',
   }
 </script>
 
