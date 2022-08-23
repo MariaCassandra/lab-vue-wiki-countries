@@ -1,27 +1,39 @@
 <template>
   <div className="app">
-    <router-view/>
+    <NavBar />
+    <div class="container">
+      <div class="row">
+        <router-view />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'App',
-  }
+import NavBar from "./components/NavBar.vue";
+import CountriesList from "./components/CountriesList.vue";
+
+export default {
+  name: "App",
+  components: {
+    NavBar,
+    CountriesList,
+  },
+};
 </script>
 
 <style>
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -63,5 +75,4 @@ code {
     transform: rotate(360deg);
   }
 }
-
 </style>
