@@ -1,4 +1,3 @@
-// src/router.js
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from './views/HomeView.vue';
 
@@ -11,12 +10,12 @@ const routes = [
   // {
   //   path: '/list',
   //   name: 'list',
-  //   component: () => import(/* webpackChunkName: 'list' */ './pages/CountriesList.vue'),
+  //   component: () => import(/* webpackChunkName: 'list' */ './components/CountriesList.vue'),
   //   children: [
   //     {
   //       path: '/details',
   //       name: 'details',
-  //       component: () => import(/* webpackChunkName: 'details' */ './pages/CountriesDetails.vue')
+  //       component: () => import(/* webpackChunkName: 'details' */ './components/CountriesDetails.vue')
   //     },
   //   ]
   // }
