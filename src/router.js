@@ -7,18 +7,16 @@ const routes = [
     name: 'root',
     component: HomeView,
   },
-  // {
-  //   path: '/list',
-  //   name: 'list',
-  //   component: () => import(/* webpackChunkName: 'list' */ './components/CountriesList.vue'),
-  //   children: [
-  //     {
-  //       path: '/details',
-  //       name: 'details',
-  //       component: () => import(/* webpackChunkName: 'details' */ './components/CountriesDetails.vue')
-  //     },
-  //   ]
-  // }
+  {
+    path: '/list',
+    name: 'list',
+    component: () => import(/* webpackChunkName: 'list' */ './components/CountriesList.vue'),
+  },
+  {
+    path: '/countryCode',
+    name: 'CountryDetails',
+    component: () => import(/* webpackChunkName: 'details' */ './components/CountryDetails.vue')
+  },
 ];
 
 export default createRouter({
