@@ -1,33 +1,10 @@
 <template>
   <div class="countries-details--container">
     <img :src="`https://flagpedia.net/data/flags/icon/72x54/${countryInfo.alpha2Code.toLowerCase()}.png`" :alt="`Flag of the ${countryInfo.name}`">
-    <h1>{{ name }}</h1>
-  <table class="table">
-    <thead></thead>
-    <tbody>
-      <tr>
-        <td style="width: 30%">Capital</td>
-        <td>{{ capital }}</td>
-      </tr>
-      <tr>
-        <td>Area</td>
-        <td>{{ area }} km <sup>2</sup></td>
-      </tr>
-      <tr>
-        <td>Borders</td>
-        <td>
-          <ul>
-            <li v-for="border in borders" :key="border">
-                <router-link
-                    :href="`/country/${border}`">
-                    {{ border }}
-                </router-link>
-            </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <h1>Esto es Country Details</h1>
+    <p>Capital: {{ countryInfo.capital }}</p>
+    <p>Area: {{ countryInfo.area}} Km2</p>
+    <router-link v-for="border in countryInfo.borders" :key="border" :to="border">{{ border }}</router-link>
   </div>
 </template>
 
