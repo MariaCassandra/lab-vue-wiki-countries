@@ -4,6 +4,7 @@
     <div class="container">
       <div class="row">
         <CountriesList :countries="countries"/>
+        <router-view />
       </div>
     </div>
   </div>
