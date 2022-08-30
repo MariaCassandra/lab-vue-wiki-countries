@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="countries-list-container">
     <div class="list-group-item">
       <router-link v-for="country in countries" :key="country.id" :to="`${country.alpha3Code}`">
         <img :src="`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`" :alt="`Flag of ${country.name.common}`">

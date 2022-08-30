@@ -12,7 +12,7 @@
 
 <script>
   import countriesData from '../public/countries.json';
-  import NavBar from '../src/components/NavBar.vue';
+  import NavBar from './components/NavBar.vue';
   import CountriesList from './components/CountriesList.vue';
   
   export default {
