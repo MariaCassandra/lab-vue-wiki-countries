@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-dark bg-primary mb-3">
-        <div class="container">
+        <div class="navigation-container">
             <router-link class="navbar-brand" to="/">LAB - WikiCountries</router-link>
         </div>
     </nav>
@@ -12,4 +12,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.navigation-container {
+    width: 100%;
+    height: 10%;
+}
+</style>

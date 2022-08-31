@@ -2,12 +2,10 @@
   <div className="app">
     <NavBar />
     <div class="container">
-      <div class="row">
-        <CountriesList :countries="countries"/>
+        <CountriesList :countries="getCountriesElementsToShowList"/>
         <router-view />
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -31,14 +29,14 @@
         let countryId = 0;
         return this.countries.map(country => {
           return {
-            id: ++countryId,
+            id: countryId++,
             name: country.name.common,
-            alpha2Code: country.alpha2Code,
+            alpha2Code: country.alpha2Code.toLowerCase(),
             alpha3Code: country.alpha3Code,
-          }
+          };
         });
       },
-    }
+    },
   };
 </script>
 
@@ -51,6 +49,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.container {
+  margin-top: 1rem;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: scroll;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
